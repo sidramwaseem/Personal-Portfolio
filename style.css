@@ -42,6 +42,7 @@ body {
   background: linear-gradient(110deg, #190061 60%, #000 60%);
 }
 #name {
+  text-align: center;
   display: block;
   max-width: 100%;
   margin-top: 4.9rem;
@@ -58,7 +59,7 @@ body {
   text-align: center;
 }
 #aboutme a {
-  color: #240090;
+  color: #3500d3;
   text-decoration: none;
 }
 #aboutme a:hover {
@@ -83,7 +84,7 @@ body {
   max-width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat (auto-fit, minmax(1fr, 100%));
+  grid-template-columns: repeat (3, minmax(1fr, 100%));
   row-gap: 1rem;
   justify-items: center;
 }
@@ -143,7 +144,7 @@ code {
   text-decoration: none;
 }
 
-.contact-details a:hover{
+.contact-details a:hover {
   text-decoration: underline;
 }
 footer {
@@ -161,10 +162,19 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+@media only screen and (max-width: 420px) {
+  #navbar {
+    height: auto;
+  }
+  #navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 @media only screen and (min-width: 850px) {
   #name {
-    max-width: 50%;
+    max-width: 40%;
     width: 50%;
     align-self: flex-start;
     margin-top: 4.9rem;
@@ -178,10 +188,13 @@ footer a:hover {
     margin: 1rem 1rem 1rem 15rem;
     padding: 1rem;
   }
+  #aboutme a {
+    color: #240090;
+  }
 
   .projects-grid {
     height: 100vh;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 2rem;
     justify-content: center;
     align-content: center;
